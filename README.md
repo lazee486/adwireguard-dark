@@ -38,7 +38,8 @@ services:
     restart: unless-stopped
     ports:
       - '53:53'           # AdGuardHome DNS Port
-      - '3000:3000'       # Default Address AdGuardHome WebUI
+      - '3000:3000'       # Default Address AdGuardHome WebUI (setup at this address)
+      - '8858:80'         # after you setup adguard it works on this port
       - '853:853'         # DNS-TLS
       - '51820:51820/udp' # wiregaurd port
       - '51821:51821/tcp' # wg-easy webUI
